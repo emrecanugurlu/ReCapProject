@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Concrete
@@ -26,6 +27,26 @@ namespace Business.Concrete
             {
                 _brandDal.Add(brand);
             }
+        }
+
+        public void Delete(Brand brand)
+        {
+            _brandDal.Delete(brand);
+        }
+
+        public List<Brand> GetAll()
+        {
+            return _brandDal.GetAll();
+        }
+
+        public Brand GetById(int id)
+        {
+            return _brandDal.Get(b => b.Id == id);
+        }
+
+        public void Update(Brand brand)
+        {
+            throw new NotImplementedException();
         }
     }
 }

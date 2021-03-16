@@ -12,9 +12,10 @@ namespace ConsoleUI
         {
 
             CarManager carManager = new CarManager(new EfCarDal());
-            BrandManager brandManager = new BrandManager(new EfBrandDal());
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            //BrandManager brandManager = new BrandManager(new EfBrandDal());
 
-            Car car = new Car
+            /*Car car = new Car
             {
                 Id = 7,
                 BrandId = 3,
@@ -28,16 +29,18 @@ namespace ConsoleUI
             {
                 Id = 9,
                 Name = "Deneme 2"
-            };
+            };*/
 
-            /*foreach (var car in carManager.Add(car))
+            foreach (var x in carManager.GetCarDetails())
             {
-                Console.WriteLine(car.Id);
-            }*/
+                Console.WriteLine(x.CarName + "/" + x.BrandName + "/" + x.ColorName + "/" + x.DailyPrice);
+            }
 
             //carManager.Add(car);
 
-            brandManager.Add(brand);
+            //brandManager.Add(brand);
+
+
 
         }
     }
