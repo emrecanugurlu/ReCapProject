@@ -19,7 +19,7 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
-            
+            throw new NotImplementedException();
         }
 
         public IResult Delete(Rental rental)
